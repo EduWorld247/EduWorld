@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GET 202: Engineering Materials</title>
+  <link rel="stylesheet" href="get202.css">
+
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: black;
+      color: #e0e0e0;
+      margin: 0;
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    header h1 {
+      background-color: #0a74da;
+      color: #f0f0f0;
+      padding: 2.5rem 1.5rem;
+      text-align: center;
+      font-size: 30px;
+      box-shadow: 0 4px 10px rgba(10, 116, 218, 0.7);
+      
+    }
+
+    @keyframes key {
+      from { transform: translate(-100%); }
+      to { transform: translate(100%); }
+    }
+    .welcome {
+      background-color: #0a74da;
+      animation: key 5s linear;
+      animation-iteration-count: infinite;
+      padding: 10px;
+      height: 200px;
+      align-content: center;
+    }
+div.insider {
+  overflow: hidden;
+  background: linear-gradient(blue, darkblue);
+}
+    header h1 {
+      margin: 0;
+      font-weight: 600;
+      font-size: 300px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      user-select: none;
+    }
+
+    .insider h1 {
+      text-align: center;
+      color: #0a74da;
+      margin: 1rem 0;
+    }
+
+    ul.fanstastic {
+      list-style-type: none;
+      margin: 0 0 10px 0;
+      padding: 0;
+      background-color: #034159;
+      overflow: hidden;
+    }
+
+    ul.fanstastic li {
+      float: left;
+    }
+
+    ul.fanstastic li a {
+      display: block;
+      color: yellow;
+      background-color: darkblue;
+      text-decoration: none;
+      padding: 10px;
+      width: 100px;
+      margin: 5px 5px 5px 5px;
+    }
+
+    table, th, td {
+      border: 2px solid #0085FF;
+      border-collapse: collapse;
+      padding: 10px;
+    }
+
+    table tr:nth-child(even) {
+      background-color: #01407A;
+      color: white;
+    }
+
+    th.important {
+      font-size: 20px;
+      background-color: #42445A;
+    }
+
+    table {
+      width: 100%;
+      margin-top: 1rem;
+    }
+
+    h2 {
+      color: #0a74da;
+      border-bottom: 3px solid #00c3ff;
+      padding-bottom: 0.3rem;
+      margin-top: 2rem;
+    }
+
+    h3 {
+      color: #00c3ff;
+      text-decoration: underline;
+      margin-top: 1.5rem;
+    }
+
+    .code-block {
+      background-color: #1f1f1f;
+      color: #00c3ff;
+      padding: 1rem;
+      border-radius: 10px;
+      margin: 1.5rem 0;
+      font-family: 'Courier New', Courier, monospace;
+      white-space: pre-wrap;
+    }
+
+    footer {
+      background-color: #0a74da;
+      color: #f0f0f0;
+      text-align: center;
+      padding: 1.5rem;
+      margin-top: 3rem;
+      border-radius: 15px;
+      box-shadow: inset 0 1px 6px rgba(255, 255, 255, 0.1);
+    }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 1.8rem; }
+      .button { width: 100%; font-size: 1.2rem; }
+      .code-block { font-size: 0.9rem; }
+      h2 { font-size: 1.3rem; }
+    }
+    
+
+  .collapsible-section {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .collapsible-header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 12px 20px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    font-size: 1.2rem;
+    cursor: pointer;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .collapsible-content {
+    display: none;
+    padding: 15px;
+    background-color: black;
+  }
+  .collapsible-header:hover {
+    background-color: #0056b3;
+  }
+  
+  .reset {
+    background-color: red;
+    position: sticky;
+    display: block;
+    top: 50%;
+    left: 100%;
+    border: none;
+    padding: 10;
+    margin-top: -80px;
+    color: white;
+    font-size: 20px;
+    width: 160px;
+    border-radius: 100%;
+    transform: scale(0.9,0.9);
+    
+  }
+  .reset:hover {
+    background-color: #980303;
+  }
+</style> 
+</head>
+
+<body>
+<button onclick="resetAllSections()" style="margin-bottom: 15px; padding: 8px 16px; background-color: #e74c3c; color: white; border: none; border-radius: 5px; cursor: pointer;" class="reset">
+  Reset All Sections
+</button>
+
+<script>
+  function toggleSection(header) {
+    const content = header.nextElementSibling;
+    content.style.display = content.style.display === "block" ? "none" : "block";
+  }
+
+  function resetAllSections() {
+    const allContents = document.querySelectorAll('.collapsible-content');
+    allContents.forEach(content => {
+      content.style.display = 'none';
+    });
+  }
+</script>
+  <div class="insider">
+<header class="welcome" style="font-size: 50px;">INTRODUCTION TO ENGINEERING MATERIALS</header>
+  </div>
+
+  <h2>Other Notes</h2>
+  <ul class="fanstastic">
+    <li><a href="get206.html">GET206</a></li>
+    <li><a href="get202.html">GET202</a></li>
+    <li><a href="get206.html">GET206</a></li>
+    <li><a href="get202.html">GET202</a></li>
+    <li><a href="get206.html">GET206</a></li>
+    <li><a href="get202.html">GET202</a></li>
+  </ul>
+
+  <h2>Course Content</h2>
+  <table>
+    <tr><th>Week</th><th>Topic</th></tr>
+    <tr><td>1</td><td>Introduction to Engineering Materials</td></tr>
+    <tr><td>2</td><td>Basic Material Science</td></tr>
+    <tr><td>3</td><td>Metals and Alloys</td></tr>
+    <tr><td>4</td><td>Selection and Application of Metals and Alloys</td></tr>
+    <tr><td>5</td><td>Ceramics</td></tr>
+    <tr><td>6</td><td>Polymers</td></tr>
+    <tr><td>7</td><td>Composites</td></tr>
+    <tr><td>8</td><td>Nanomaterials</td></tr>
+    <tr><td>9</td><td>Integrity Assessment of Engineering Materials</td></tr>
+    <tr><td>10</td><td>Mechanical Testing of Materials</td></tr>
+    <tr><td>11</td><td>Electrical Materials</td></tr>
+    <tr><td>12</td><td>Conclusion and Course Summary</td></tr>
+  </table>
+<div class="collapsible-section">
+  <div class="collapsible-header" onclick="toggleSection(this)">
+    Introduction to Engineering Materials 
+  </div>
+  <div class="collapsible-content">
+  <h2>Introduction to Engineering Materials</h2>
+<p>
+  The earliest humans had access to only a very limited number of materials—those that occur naturally—such as:
+</p>
+<ol>
+  <li>Stone</li>
+  <li>Wood</li>
+  <li>Clay</li>
+  <li>Animal Skins</li>
+</ol>
+
+<p>
+  <strong>Material Science</strong> focuses on investigating the relationship between the structure and properties of materials. A material scientist develops or synthesizes new materials.
+</p>
+
+<p>
+  <strong>Material Engineering</strong> applies the structure-property relationship to design or engineer materials to achieve desired properties. A material engineer designs products or systems using existing materials and may also develop new processing techniques.
+</p>
+
+<h2>Structure of Materials</h2>
+<p>
+  The structure of a material refers to the arrangement of its internal components. Structures can be examined at different levels:
+</p>
+
+<ul>
+  <li><strong>Atomic Structure:</strong> The arrangement of atoms in a material, including bonding types.</li>
+  <li><strong>Molecular Structure:</strong> Relevant mostly to polymers and organic materials.</li>
+  <li><strong>Crystalline Structure:</strong> How atoms are arranged in a repeating pattern (lattice).</li>
+  <li><strong>Microstructure:</strong> The structure observed under a microscope, such as grain boundaries and phases.</li>
+  <li><strong>Macrostructure:</strong> Features visible to the naked eye, such as porosity, cracks, and surface finish.</li>
+</ul>
+<p>
+  The internal components of a material influence its properties significantly.
+</p>
+
+<h2>Properties of Solid Materials</h2>
+<p>
+  These properties are categorized into main groups or types:
+</p>
+
+<table border="1" cellpadding="8">
+  <thead>
+    <tr>
+      <th>Category</th>
+      <th>Examples</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Electrical</td>
+      <td>Conductivity, Resistivity</td>
+    </tr>
+    <tr>
+      <td>Thermal</td>
+      <td>Heat Capacity, Thermal Conductivity</td>
+    </tr>
+    <tr>
+      <td>Mechanical</td>
+      <td>Surface Hardness, Toughness, Strength</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Components of Material Science and Engineering</h2>
+<p>
+  These are interconnected aspects that define the study and application of materials:
+</p>
+<ol>
+  <li><strong>Processing</strong></li>
+  <li><strong>Structure</strong></li>
+  <li><strong>Properties</strong></li>
+  <li><strong>Performance</strong></li>
+</ol>
+
+<h2>Why Study Material Science and Engineering?</h2>
+<p>
+  Engineers often face the challenge of selecting the right material from thousands of available options. 
+  Understanding the structure-property relationship and processing techniques helps engineers make confident, informed decisions.
+</p>
+
+<h2>Classification of Materials</h2>
+<p>
+  Solid materials are commonly classified into:
+</p>
+
+<h3>1. Metals</h3>
+<ul>
+  <li>Composed of metallic elements (e.g., Fe, Al, Cu)</li>
+  <li>May contain small amounts of non-metals (e.g., C, O)</li>
+  <li>Contain non-localized (free) electrons</li>
+  <li>High electrical and thermal conductivity</li>
+  <li>Ductile and strong</li>
+</ul>
+
+<h3>2. Ceramics</h3>
+<ul>
+  <li>Compounds of metals and nonmetals (e.g., oxides, carbides)</li>
+  <li>Strong, stiff, hard but brittle</li>
+  <li>Poor electrical and thermal conductors</li>
+  <li>Resistant to high temperatures and harsh environments</li>
+  <li>Have optical properties (transparent, translucent, or opaque)</li>
+</ul>
+
+<h3>3. Polymers</h3>
+<ul>
+  <li>To be continued...</li>
+</ul>
+
+  </div>
+  </div>
+<div class="collapsible-section">
+  <div class="collapsible-header" onclick="toggleSection(this)">
+    Crystal Structures
+  </div>
+  <div class="collapsible-content">
+    <h2>Crystal Structures</h2>
+<h3>Crystal Lattices and Unit Cells</h3>
+<p>
+  The arrangement of atoms in a material greatly influences its properties. Atoms in crystalline solids are arranged in a repeating, three-dimensional pattern known as a <strong>crystal lattice</strong>. This long-range order allows the material to maintain its shape and exhibit distinct physical properties.
+</p>
+
+<p>
+  A <strong>crystal lattice</strong> is a regular geometric arrangement of atoms in space. A <strong>crystalline material</strong> has atoms arranged in a periodic pattern that extends in all directions. The physical properties of crystalline solids often depend heavily on this internal structure.
+</p>
+
+<p>
+  A <strong>unit cell</strong> is the smallest repeating unit in a crystal lattice that, when repeated in all directions, creates the entire crystal structure. The unit cell defines the material's symmetry and many of its macroscopic properties.
+</p>
+
+<h3>Metallic Crystal Structures</h3>
+<p>
+  In metallic materials, atomic bonding is non-directional (metallic bonding). This allows atoms to pack closely in regular patterns. There are three main types of crystal structures found in engineering metals:
+</p>
+
+<ol>
+  <li><strong>Face Centered Cubic (FCC)</strong></li>
+  <li><strong>Body Centered Cubic (BCC)</strong></li>
+  <li><strong>Hexagonal Close Packed (HCP)</strong></li>
+</ol>
+
+<h4>1. Face Centered Cubic (FCC)</h4>
+<p>
+  The FCC structure has atoms at each corner of the cube and at the centers of all the cube faces. Metals with FCC structures include <strong>copper, aluminum, silver, and gold</strong>.
+</p>
+<p>
+  FCC metals tend to be ductile and have excellent formability because they possess a higher number of slip systems, allowing atoms to move more easily under stress.
+</p>
+<h4>FCC Slip Systems</h4>
+<p>
+  Slip in crystals occurs along planes and directions with the highest atomic density. In FCC (Face Centered Cubic) structures, the most densely packed slip plane is the <strong>(111)</strong> plane, and the most favorable slip direction lies within this plane.
+</p>
+<p>
+  FCC structures exhibit a high number of slip systems, which makes them highly ductile. Each (111) slip plane contains 3 independent slip directions. With 4 such planes in the FCC unit cell, this results in:
+</p>
+<ul>
+  <li>4 slip planes × 3 directions per plane = <strong>12 slip systems</strong></li>
+</ul>
+
+<h4>Cube Edge Length and Atomic Radius in FCC</h4>
+<p>
+  In an FCC unit cell, the atoms at the corners and the face centers are in contact along the face diagonal. The relationship between the cube edge length <strong>a</strong> and the atomic radius <strong>r</strong> is:
+</p>
+<p>
+  <strong>a = 2√2·r</strong>
+</p>
+
+<h4>Atomic Arrangement in FCC</h4>
+<p>
+  The FCC unit cell contains:
+</p>
+<ul>
+  <li><strong>8 corner atoms</strong>: Each shared among 8 unit cells (1/8 contribution each)</li>
+  <li><strong>6 face-centered atoms</strong>: Each shared between 2 unit cells (1/2 contribution each)</li>
+</ul>
+<p>
+  Total number of atoms per FCC unit cell =
+  (8 × 1/8) + (6 × 1/2) = <strong>4 atoms</strong>
+</p>
+
+<h4>Coordination Number and Atomic Packing Factor (APF)</h4>
+<p>
+  Two important characteristics of a crystal structure are:
+</p>
+<ol>
+  <li><strong>Coordination Number:</strong> The number of nearest neighbor atoms surrounding an atom.</li>
+  <li><strong>Atomic Packing Factor (APF):</strong> The fraction of volume in a unit cell occupied by atoms.</li>
+</ol>
+<p>
+  For FCC:
+</p>
+<ul>
+  <li><strong>Coordination Number:</strong> 12 (each atom is in contact with 12 others)</li>
+  <li><strong>APF:</strong> 0.74 (the highest possible for equal spheres in 3D)</li>
+</ul>
+
+<h4>Atomic Packing Factor (APF) for FCC</h4>
+<p>
+  The Atomic Packing Factor (APF) is defined as the ratio of the total volume of atoms within a unit cell to the total volume of the unit cell:
+</p>
+<p>
+  <strong>APF = Volume of atoms in unit cell / Total volume of unit cell</strong>
+</p>
+
+<h5>1. Relationship Between Cube Edge Length and Atomic Radius</h5>
+<p>
+  In FCC, atoms touch along the face diagonal. The face diagonal is equal to 4R, where R is the atomic radius. Using Pythagoras theorem for a cube face:
+</p>
+<p>
+  Face diagonal = √2 · a = 4R → <strong>a = 2√2 · R</strong>
+</p>
+
+<h5>2. Volume of FCC Unit Cell</h5>
+<p>
+  Volume of the cube (unit cell): <strong>V<sub>c</sub> = a³ = (2√2 · R)³ = 16√2 · R³</strong>
+</p>
+
+<h5>3. Number of Atoms in FCC Unit Cell</h5>
+<ul>
+  <li>8 corner atoms × (1/8 per unit cell) = 1 atom</li>
+  <li>6 face-centered atoms × (1/2 per unit cell) = 3 atoms</li>
+  <li><strong>Total = 4 atoms per FCC unit cell</strong></li>
+</ul>
+
+<h5>4. Volume of Atoms in FCC Unit Cell</h5>
+<p>
+  Volume of one atom (assumed spherical): <strong>V = (4/3)πR³</strong><br>
+  Volume of 4 atoms: <strong>V<sub>s</sub> = 4 × (4/3)πR³ = (16/3)πR³</strong>
+</p>
+
+<h5>5. Atomic Packing Factor (APF)</h5>
+<p>
+  APF = V<sub>s</sub> / V<sub>c</sub> = [(16/3)πR³] / [16√2 · R³] = (π / (3√2)) ≈ <strong>0.74</strong>
+</p>
+<p>
+  The APF for FCC is approximately <strong>0.74</strong>, which is the highest possible for identical spheres in 3D close packing.
+</p>
+
+<h4>Body-Centered Cubic (BCC) Crystal Structure</h4>
+<p>
+  The Body-Centered Cubic (BCC) structure is one of the common crystal structures found in metals. In this structure:
+</p>
+<ul>
+  <li>Atoms are located at all eight corners of the cube.</li>
+  <li>There is one additional atom at the center of the cube.</li>
+</ul>
+<p>
+  Examples of metals with BCC structures include <strong>iron (α-Fe), chromium, and tungsten</strong>. BCC structures are generally less ductile than FCC but are stronger and more resistant to deformation, especially at high temperatures.
+</p>
+
+<h5>Number of Atoms in BCC Unit Cell</h5>
+<ul>
+  <li>8 corner atoms × (1/8 per unit cell) = 1 atom</li>
+  <li>1 body-centered atom (fully within the unit cell) = 1 atom</li>
+  <li><strong>Total = 2 atoms per BCC unit cell</strong></li>
+</ul>
+
+<h5>Coordination Number</h5>
+<p>
+  The coordination number of BCC is <strong>8</strong>, meaning each atom is in contact with 8 nearest neighbors.
+</p>
+
+<h5>Atomic Packing Factor (APF)</h5>
+<p>
+  The APF is the fraction of volume in a unit cell that is occupied by atoms:
+</p>
+<p>
+  <strong>APF = Volume of atoms in unit cell / Total volume of unit cell</strong><br>
+  = [2 × (4/3)πR³] / a³<br>
+  For BCC, a = (4R) / √3 → a³ = [(4R)/√3]³ = (64R³)/(3√3)<br>
+  APF ≈ <strong>0.68</strong>
+</p>
+
+<h5>Slip System in BCC</h5>
+<p>
+  BCC has more slip systems than FCC, but the slip planes are less densely packed, making BCC materials generally less ductile:
+</p>
+<ul>
+  <li>Slip plane: {110}</li>
+  <li>Slip direction: [111]</li>
+  <li>Total slip systems: 12</li>
+</ul>
+
+<hr>
+
+<h4>Hexagonal Close-Packed (HCP) Crystal Structure</h4>
+<p>
+  Not all metals crystallize in cubic symmetry. One important alternative is the <strong>Hexagonal Close-Packed (HCP)</strong> structure.
+</p>
+<p>
+  In HCP:
+</p>
+<ul>
+  <li>The top and bottom faces of the unit cell each contain 6 atoms arranged in a regular hexagon.</li>
+  <li>There is 1 atom at the center of the top and bottom faces.</li>
+  <li>3 atoms are located in the middle plane between top and bottom layers.</li>
+</ul>
+<p>
+  Examples include <strong>magnesium, titanium, and zinc</strong>. HCP metals often have limited slip systems, making them less ductile than FCC metals.
+</p>
+  </div>
+</div>
+
+<script>
+  function toggleSection(header) {
+    const content = header.nextElementSibling;
+    content.style.display = content.style.display === "block" ? "none" : "block";
+  }
+</script>
+
+<div class="collapsible-section">
+  <div class="collapsible-header" onclick="toggleSection(this)">
+    Basic Material Science
+  </div>
+  <div class="collapsible-content">
+      <h2>Atomic Structure</h2>
+  <p>The atomic structure forms the foundation for understanding how materials behave. It determines the material’s properties like conductivity, strength, and thermal expansion.</p>
+  <h3>Structure of Atoms</h3>
+  <ul>
+    <li>An atom consists of a central nucleus made up of protons and neutrons. The protons carry a positive charge, while neutrons have no charge. The nucleus is surrounded by electrons, which move in orbitals around the nucleus.</li>
+    <li>The nucleus contains nearly all of the atom’s mass, while the electrons occupy energy levels or shells that orbit the nucleus.</li>
+    <li>The arrangement and number of electrons in an atom’s outermost shell (the valence electrons) determine many of the material’s properties, including its ability to bond with other atoms.</li>
+  </ul>
+  
+  <h3>Electron Configuration and Impact on Conductivity and Bonding</h3>
+  <ul>
+    <li>Electron Configuration refers to the distribution of electrons across the various shells and orbitals in an atom. The electrons in the outermost shell, known as valence electrons, are crucial for chemical bonding and conductivity.</li>
+    <li><strong>Conductivity:</strong> In metals, the valence electrons are not tightly bound to any particular atom, making them free to move and conduct electricity.</li>
+    <li><strong>Bonding:</strong> Electron configuration influences how atoms bond—forming ionic, covalent, or metallic bonds depending on valence electron interactions.</li>
+  </ul>
+  
+  <h2>Atomic Bonding</h2>
+  <p>The way atoms bond to form solids greatly influences material properties like strength, conductivity, and hardness. The four main types of atomic bonding include:</p>
+  <ul>
+    <li>
+      <strong>Ionic Bonding:</strong>
+      <p>Ionic bonds are formed when electrons are transferred from one atom to another, creating positively charged cations and negatively charged anions.</p>
+      <p>Example: Sodium chloride (NaCl) – Sodium donates an electron to chlorine, forming Na⁺ and Cl⁻ ions.</p>
+    </li>
+    
+    <li>
+      <strong>Covalent Bonding:</strong>
+      <p>Covalent bonds involve the sharing of electrons. They are found in ceramics and salts, typically brittle with high melting points but poor electrical conductivity.</p>
+      <p>Example: Water (H₂O) – Oxygen shares electrons with two hydrogen atoms.</p>
+      <p>Example: Diamond – A carbon structure with strong covalent bonds throughout, leading to extreme hardness.</p>
+    </li>
+    
+    <li>
+      <strong>Metallic Bonding:</strong>
+      <p>In metallic bonding, valence electrons move freely across the structure in a “sea of electrons.”</p>
+      <p>Example: Copper (Cu) – Free-moving electrons enable excellent electrical and thermal conductivity.</p>
+      <p>Metallic bonds give rise to properties like malleability and strength.</p>
+    </li>
+    
+    <li>
+      <strong>Van der Waals Bonds:</strong>
+      <p>Weak forces occurring between close atoms or molecules, not involving electron transfer or sharing.</p>
+      <p>Example: Graphite – Layers are held together by Van der Waals forces.</p>
+      <p>Common in polymers and soft materials due to their weak nature.</p>
+    </li>
+  </ul>
+  <h2>Introduction to Atomic Structures</h2>
+  <p>Atomic structures are foundational to our understanding of the physical world. They describe how matter is built from atoms and how atoms interact to form complex substances.</p>
+  <p>The exploration of atomic theory began in ancient Greece and evolved through centuries. Major advancements occurred in the 19th and 20th centuries thanks to pioneering scientists.</p>
+
+  
+    <h2>Evolution of Atomic Structure</h2>
+    
+    <h3>Dalton's Atomic Theory (1803)</h3>
+    
+
+  </div>
+  
+</div>
+    <div class="collapsible-section">
+  <div class="collapsible-header" onclick="toggleSection(this)">
+  Introduction to Electronic Configuration 
+  </div>
+  <div class="collapsible-content">
+    <h2>Introduction to electronic configuration</h2>
+    <p>Electronic configuration refers to the distribution of electrons in an atom's electron shells or energy levels.</p>
+    
+    <h3>Key points in electronic configuration:</h3>
+    <ul>
+      <li>Energy Levels (Shells): Electrons in an atom are organized into energy levels, referred to as shells. These energy levels are labeled with the principal quantum number (n), where higher values of n correspond to higher energy levels. </li>
+      <li>Sublevels (Subshells): Each energy level is composed of one or more sublevels, also known as subshells. The sublevels are labeled s, p, d, and f. The number of sublevels within an energy level is equal to the principal quantum number (n). For example, the first energy level (n=1) has one sublevel (s), the second energy level (n=2) has two sublevels (s and p), and so on.</li>
+      <li>Orbitals: Sublevels are further divided into orbitals, which are regions within a sublevel where electrons are likely to be found. Orbitals are labeled using a combination of the sublevel and a specific magnetic quantum number (ml). The s sublevel has one orbital, the p sublevel has three orbitals, the d sublevel has five orbitals, and the f sublevel has seven orbitals.</li>
+      
+      
+    </ul>
+  </div>
+    </div>
+        <div class="collapsible-section">
+  <div class="collapsible-header" onclick="toggleSection(this)">
+  Metals and alloys
+  </div>
+  <div class="collapsible-content">
+    <h2>Materials, Metals, and Alloys</h2>
+<p>Metals are polycrystalline substances composed of numerous fine crystals. Pure metals often exhibit low strength and lack the necessary properties for most engineering applications, which is why alloys—created by melting two metals or a metal with a non-metal—are often used to achieve superior characteristics.</p>
+<p>Metals and alloys are classified into two major categories:</p>
+<h2>Ferrous and Non-Ferrous Metals</h2>
+
+<h3>Ferrous Metals</h3>
+<p>These metals have iron as their main constituent. Examples include:</p>
+<ul>
+  <li>Pig iron</li>
+  <li>Cast iron</li>
+  <li>Wrought iron</li>
+  <li>Steels</li>
+</ul>
+
+<h3>Non-Ferrous Metals</h3>
+<p>These metals do not contain significant amounts of iron as their primary component. Examples include:</p>
+<ul>
+  <li>Copper</li>
+  <li>Aluminium</li>
+  <li>Brass</li>
+  <li>Bronze</li>
+  <li>Tin</li>
+  <li>Silver</li>
+  <li>Zinc</li>
+  <li>Invar (an alloy with low thermal expansion)</li>
+</ul>
+
+<h2>Classification of Carbon and Low-Alloy Steels</h2>
+<p>Steels are classified in several ways, including by:</p>
+<ul>
+  <li><strong>Composition:</strong> Carbon steel, low-alloy steel, stainless steel, etc.</li>
+  <li><strong>Manufacturing Methods:</strong> Open hearth, basic oxygen process, electric furnace, etc.</li>
+  <li><strong>Finishing Method:</strong> Hot rolling, cold rolling, etc.</li>
+  <li><strong>Product Form:</strong> Bar, plate, sheet, strip, tubing, structural shapes, etc.</li>
+  <li><strong>De-oxidation Practice:</strong> Killed, semi-killed, capped, or rimmed steel.</li>
+  <li><strong>Microstructure:</strong> Ferritic, pearlitic, martensitic, etc.</li>
+  <li><strong>Strength Level:</strong> According to ASTM standards.</li>
+  <li><strong>Heat Treatment:</strong> Annealing, quenching and tempering, thermomechanical processing.</li>
+  <li><strong>Quality Descriptors:</strong> Forging quality, commercial quality, etc.</li>
+</ul>
+
+<h2>Classification by Carbon Content (wt %)</h2>
+<p>The carbon content of steel significantly impacts its properties. Steels can be classified by the percentage of carbon content:</p>
+
+<h3>Dead Soft (0.05% - 0.15%)</h3>
+<ul>
+  <li><strong>Applications:</strong> Wires, rivets, chain, sheet, strip, welded pipe.</li>
+  <li><strong>Characteristics:</strong> Very low carbon content, extremely soft and ductile.</li>
+</ul>
+
+<h3>Mild (0.10% - 0.30%)</h3>
+<ul>
+  <li><strong>Applications:</strong> Rolled plate, structural shapes, gears, forgings.</li>
+  <li><strong>Characteristics:</strong> Common, easy to form and weld.</li>
+</ul>
+
+<h3>Medium Carbon (0.30% - 0.60%)</h3>
+<ul>
+  <li><strong>Applications:</strong> Connecting rods, crane hooks, shafts, axles, gears, rotors, rails.</li>
+  <li><strong>Characteristics:</strong> Improved hardness and strength compared to mild steel.</li>
+</ul>
+
+<h3>High Carbon (0.6% - 1.0%)</h3>
+<ul>
+  <li><strong>Applications:</strong> Screwdrivers, saws, drills, dies, hammers, punches, chisels.</li>
+  <li><strong>Characteristics:</strong> High hardness (450 to 600 BHN) but lower ductility.</li>
+</ul>
+
+<h3>Ultrahigh Carbon (1.0% - 1.4%)</h3>
+<ul>
+  <li><strong>Applications:</strong> Railway rails, springs, mandrels, taps, balls, pins, tools, thread metal dies.</li>
+  <li><strong>Characteristics:</strong> Very high hardness and strength, but very brittle and difficult to weld.</li>
+</ul>
+
+<h2>Classification by Alloy Content</h2>
+<p>Steel alloys are also categorized by the type of alloying elements added. Some common classifications include:</p>
+
+<h3>Manganese Steels</h3>
+<p>Contains a significant amount of manganese, which increases toughness and hardness.</p>
+
+<h3>Silicon-Manganese Steels</h3>
+<p>Alloys of steel with added silicon and manganese, improving strength and wear resistance.</p>
+
+<h3>Chromium Steels</h3>
+<p>Alloys that contain chromium to enhance hardness, toughness, and corrosion resistance.</p>
+
+<h3>Chromium-Nickel (Stainless) Steels</h3>
+<p>These alloys, which include both chromium and nickel, are known for their high corrosion resistance, commonly used in applications requiring resistance to rust and corrosion.</p>
+
+<h3>Tungsten-Chromium-Vanadium (Tool) Steels</h3>
+<p>Special tool steels containing tungsten, chromium, and vanadium, designed for high-wear applications like cutting tools and molds.</p>
+
+<p>Each of these classifications is tailored to meet specific performance requirements in various industrial applications, providing steels with a balance of strength, toughness, and resistance to wear, corrosion, and heat.</p>
+
+<h2>Classification of Cast Irons</h2>
+
+<h3>Grey Iron</h3>
+<p>Grey cast iron is characterized by its grey color, which is due to the carbon being primarily in the form of graphite.</p>
+<p><strong>Properties and Characteristics:</strong></p>
+<ul>
+  <li>Has the lowest melting point of ferrous alloys.</li>
+  <li>Exhibits high resistance to wear.</li>
+</ul>
+
+<h3>White Iron</h3>
+<p>In white cast iron, the carbon is present as iron carbide (Fe₃C), which gives the fracture surface a white appearance.</p>
+<p><strong>Properties and Characteristics:</strong></p>
+<ul>
+  <li>Extremely hard and brittle, with limited commercial uses.</li>
+</ul>
+<p><strong>Applications:</strong> Commonly used for grinding media balls due to its hardness.</p>
+
+<h3>Ductile Cast Iron</h3>
+<p>Also known as nodular cast iron, it is produced by adding small amounts of magnesium or cerium to the melt. This transforms the graphite into a nodular or spherical shape, which is well-dispersed throughout the material.</p>
+<p><strong>Properties:</strong></p>
+<ul>
+  <li>Excellent strength, ductility, and impact resistance.</li>
+  <li>Suitable for applications requiring high strength and toughness.</li>
+</ul>
+
+<h3>Malleable Cast Iron</h3>
+<p>Malleable cast iron is created by heating white iron at temperatures between 800-900°C for an extended period in a neutral atmosphere, preventing oxidation. This process decomposes cementite, forming graphite in the form of clusters or rosettes, surrounded by ferrite or pearlite, depending on the cooling rate.</p>
+<p><strong>Properties:</strong> Malleable cast iron is more similar to steel than regular cast iron due to its improved ductility.</p>
+
+<h2>Stainless Steels</h2>
+<p>Stainless steels are known for their high resistance to corrosion (rusting) in various environments, especially in ambient atmospheres. The primary alloying element in stainless steel is chromium.</p>
+<p>There are five main types of stainless steel:</p>
+
+<h3>Ferritic Stainless Steel</h3>
+<ul>
+  <li>Magnetic and typically contains 10–30% chromium.</li>
+  <li>Known for good resistance to stress corrosion cracking and oxidation.</li>
+</ul>
+
+<h3>Martensitic Stainless Steel</h3>
+<ul>
+  <li>Contains higher carbon content and 12–18% chromium.</li>
+  <li>Magnetic, and can be heat-treated to high hardness.</li>
+  <li>Used in applications like knives, turbines, and surgical instruments.</li>
+</ul>
+
+<h3>Austenitic Stainless Steel</h3>
+<ul>
+  <li>The most common type of stainless steel.</li>
+  <li>Contains 16–26% chromium and 6–22% nickel.</li>
+  <li>Non-magnetic and highly corrosion-resistant.</li>
+  <li>Ideal for food processing, medical instruments, and construction.</li>
+</ul>
+
+<h3>Duplex Stainless Steel</h3>
+<ul>
+  <li>Combines the properties of ferritic and austenitic stainless steels.</li>
+  <li>Offers improved resistance to pitting and crevice corrosion.</li>
+</ul>
+
+<h3>Precipitation Hardening Stainless Steel</h3>
+<ul>
+  <li>Strengthened by the formation of fine particles (precipitates) through heat treatment.</li>
+  <li>Known for high strength and corrosion resistance.</li>
+  <li>Commonly used in aerospace and high-stress applications.</li>
+</ul>
+
+<p>Stainless steels are widely used due to their strength, durability, and resistance to corrosion in various industries, from construction to medical devices.</p>
+Here is the complete HTML formatting for your content on Stainless Steels, Copper Alloys, and Titanium and its Alloys:
+
+<h2>Stainless Steels</h2>
+<p>Stainless steels are known for their high resistance to corrosion (rusting) in various environments, especially in ambient atmospheres. The primary alloying element in stainless steel is chromium.</p>
+<p>There are five main types of stainless steel:</p>
+
+<h3>Ferritic Stainless Steel</h3>
+<ul>
+  <li>Magnetic and typically contains 10–30% chromium.</li>
+  <li>Known for good resistance to stress corrosion cracking and oxidation.</li>
+</ul>
+
+<h3>Martensitic Stainless Steel</h3>
+<ul>
+  <li>Contains higher carbon content and 12–18% chromium.</li>
+  <li>Magnetic, and can be heat-treated to high hardness.</li>
+  <li>Used in applications like knives, turbines, and surgical instruments.</li>
+</ul>
+
+<h3>Austenitic Stainless Steel</h3>
+<ul>
+  <li>The most common type of stainless steel.</li>
+  <li>Contains 16–26% chromium and 6–22% nickel.</li>
+  <li>Non-magnetic and highly corrosion-resistant.</li>
+  <li>Ideal for food processing, medical instruments, and construction.</li>
+</ul>
+
+<h3>Duplex Stainless Steel</h3>
+<ul>
+  <li>Combines the properties of ferritic and austenitic stainless steels.</li>
+  <li>Offers improved resistance to pitting and crevice corrosion.</li>
+</ul>
+
+<h3>Precipitation Hardening Stainless Steel</h3>
+<ul>
+  <li>Strengthened by the formation of fine particles (precipitates) through heat treatment.</li>
+  <li>Known for high strength and corrosion resistance.</li>
+  <li>Commonly used in aerospace and high-stress applications.</li>
+</ul>
+
+<p>Stainless steels are widely used due to their strength, durability, and resistance to corrosion in various industries, from construction to medical devices.</p>
+
+<h2>Applications of Copper Alloys</h2>
+<ul>
+  <li><strong>Brass:</strong> Used in jewellery, gilding metal, cartridge casings, radiators, musical instruments, electronic packaging, and coins.</li>
+  <li><strong>Bronzes:</strong> Used in various high-strength applications due to their enhanced corrosion resistance.</li>
+</ul>
+
+<h2>Titanium and its Alloys</h2>
+<p>Titanium and its alloys are highly regarded for their exceptional combination of properties. Pure titanium has a low density (4.5 g/cm³), a high melting point (1668°C), and a high elastic modulus (107 GPa). Titanium alloys can achieve impressive tensile strengths at room temperature, up to 1400 MPa, which gives them remarkable specific strengths. They are also highly ductile, easily forged, and machinable.</p>
+
+<h3>Limitations</h3>
+<p>The main limitation of titanium is its chemical reactivity at elevated temperatures, which requires non-conventional refining, melting, and casting techniques. As a result, titanium alloys are more expensive than many other metals.</p>
+
+<h3>Corrosion Resistance</h3>
+<p>Despite their cost, titanium alloys are known for their excellent corrosion resistance at normal temperatures, making them highly suitable for harsh environments like aerospace, space vehicles, surgical implants, and industries like petroleum and chemicals.</p>
+
+<h3>Principal Advantages</h3>
+<ul>
+  <li>Low density (4.3 g/cm³), high melting point (1668°C), and high elastic modulus (107 GPa).</li>
+  <li>Extremely strong (~1400 MPa) with excellent specific strength.</li>
+  <li>Highly ductile, easily forged, and machinable.</li>
+  <li>Excellent corrosion resistance in many environments.</li>
+</ul>
+
+<h3>Principal Disadvantages</h3>
+<ul>
+  <li>Chemical reactivity at high temperatures, requiring costly and non-conventional production methods.</li>
+</ul>
+
+<p>These non-ferrous metals, especially when alloyed, provide a wide range of benefits and applications across various industries, from aerospace to medical and industrial applications.</p>
+
+<h2>Polymers</h2>
+<p>Polymers are large molecules made up of many repeating units chemically bonded into long chains. The word "polymer" comes from the Greek words for "many parts." These polymers are specifically made of small units bonded into long chains.</p>
+
+<h3>Types of Polymers</h3>
+<ul>
+  <li><strong>Organic Polymers:</strong> Primarily contain carbon and hydrogen. Examples: Polypropylene, Polystyrene.</li>
+  <li><strong>Inorganic Polymers:</strong> Have a backbone made of elements other than carbon, such as silicon or phosphorus.</li>
+</ul>
+
+<h3>Polymer Variations</h3>
+<ul>
+  <li><strong>Polyvinyl chloride (PVC):</strong> Contains chlorine.</li>
+  <li><strong>Nylon:</strong> Contains nitrogen.</li>
+  <li><strong>Teflon:</strong> Contains fluorine.</li>
+  <li><strong>Polyester and Polycarbonates:</strong> Contain oxygen.</li>
+</ul>
+
+<h3>Natural Polymers</h3>
+<p>Examples of natural polymers include silk, cotton, and wool.</p>
+
+<h3>Polymer Classification</h3>
+<ul>
+  <li>Elastomers</li>
+  <li>Thermoset/Thermosetting Polymers</li>
+  <li>Thermoplastics
+    <ul>
+      <li>Crystalline</li>
+      <li>Amorphous</li>
+    </ul>
+  </li>
+</ul>
+
+<h3>Elastomers</h3>
+<p>Elastomer plastics are typically chain, branched, or even network types, where the polymer chains are very loosely intertwined. This structure makes elastomers pliable and stretchy. Another name for elastomers is rubber. An example is silicone rubber, used for its flexibility and stretchability in various applications.</p>
+
+<h3>Thermoplastics</h3>
+<p>Thermoplastics soften and melt when heated and harden when cooled, allowing processes like injection moulding and extrusion. They can be reground and reused, though with some property loss.</p>
+
+<h4>Amorphous Polymers</h4>
+<p>These are hard and rigid below a specific temperature called the glass transition temperature.</p>
+
+<h4>Crystalline/Semi-Crystalline Polymers</h4>
+<p>They have better rigidity, hardness, density, lubricity, creep resistance, and solvent resistance than amorphous polymers. Generally, higher glass transition temperatures mean better high-temperature performance.</p>
+
+<h3>Thermosets / Thermosetting Polymers</h3>
+<p>Thermosets form cross-links between neighbouring polymer molecules, limiting chain movement. They degrade, rather than soften, under excessive heat. While they were once considered non-recyclable, new recycling technologies now allow for some reuse after curing.</p>
+
+<h3>Properties of Polymers/Plastics</h3>
+<ul>
+  <li><strong>Electrical Insulation:</strong> Do not conduct electricity, important for safety.</li>
+  <li><strong>Transparency:</strong> Useful in packaging to view contents.</li>
+  <li><strong>Hygiene:</strong> Safe and clean, used in food and healthcare industries.</li>
+  <li><strong>Lightweight:</strong> Helps reduce vehicle weight, improving fuel efficiency and lowering CO₂ emissions.</li>
+  <li><strong>Durability:</strong> Tough and long-lasting.</li>
+  <li><strong>Chemical Resistance:</strong> Highly resistant to chemicals.</li>
+  <li><strong>Flexibility:</strong> Versatile for various applications.</li>
+</ul>
+
+<ul>
+  <li><strong>Formability:</strong> Allows for the creation of various forms and shapes, crucial in manufacturing.</li>
+  <li><strong>Cost-Effectiveness:</strong> Plastics are affordable and convenient for a wide range of applications.</li>
+</ul>
+
+<h3>Polymer Forming Techniques</h3>
+<ul>
+  <li>Compression & Transfer Moulding</li>
+  <li>Injection Moulding</li>
+  <li>Extrusion</li>
+  <li>Blow Moulding</li>
+  <li>Casting</li>
+</ul>
+
+  </div>
+        </div>
+     
+<div class="collapsible-section">
+  <div class="collapsible-header" onclick="toggleSection(this)">
+   Phase Diagrams
+  </div>
+  <div class="collapsible-content">
+    
+   <h2>Cooling curve</h2>
+<p>A cooling curve is a line graph that represents the change in the phases of matter. Below is 
+an example of a cooling curve for a pure substance.</p>
+<img src="C:\Users\REDEEMERS\Pictures\cooling-curve-6-638.webp" alt="" class="img1">
+
+<h2>Phase Diagram</h2>
+<p>A phase diagram is a graphical representation of the physical states of a substance 
+under the conditions of varying temperature (x-axis) and pressure (y-axis). Phase diagrams are 
+always drawn at equilibrium state because a system always tries to be stable. Phase diagrams are classified 
+as under:</p>
+<ul>
+  <li>Unary phase diagram (single component systems)</li>
+  <li>Binary phase diagram (two component systems)</li>
+  <li>Ternary phase diagram (three component systems)</li>
+  <li>Quaternary phase diagram (four component systems)</li> 
+  <li>And so on.</li>
+</ul>
+
+<h3>Unary Phase Diagram</h3>
+<p>A unary phase diagram is a graphical representation of the phases of a single component system 
+as a function of temperature and pressure. The diagram shows the different phases (solid, liquid, 
+gas) that can exist at various temperatures and pressures.</p>
+<p>In a unary phase diagram, the x-axis typically represents temperature, while the y-axis represents
+pressure. The diagram is divided into different regions, each representing a specific phase of the 
+substance. The boundaries between these regions indicate the conditions under which phase transitions 
+occur, such as melting, boiling, or sublimation.</p>
+
+<div class="edit">
+  <p>Unary Phase Diagram of Iron</p>
+  <img src="C:\Users\REDEEMERS\Pictures\Screenshot 2025-05-23 180254.png" alt="" class="img1">
+  <ul style="color: white;">
+    <li>The diagram illustrates different phases of iron as a function of temperature and pressure.</li>
+    <li>Gaseous, liquid, and solid forms of iron are single phases, such as BCC, FCC, etc.</li>
+    <li>The boundaries labeled AB, CDE, FDE, GHJ, GHK represent phase boundaries.</li>
+    <li>Triple points are located on boundaries D and H.</li>
+    <li>Along phase boundaries like AB, CDE, FDE, GHJ, and GHK, the degree of freedom (D) is 1, meaning temperature or pressure can be varied without changing the phase.</li>
+    <li>At points D and H, which are triple points, three phases coexist in equilibrium, so D=0. Changes in temperature or pressure at these points cause the system to leave the triple point.</li>
+    <li>The crystal structures of BCC, FCC, and BCC phases are obtained at increasing temperatures.</li>
+  </ul>
+</div>
+
+<h3>Binary Phase Diagram</h3>
+<p>A binary phase diagram graphically depicts the phases of a two-component system as a function of temperature and composition. It shows how the phases of the two components interact at different temperatures and compositions.</p>
+<p>Gibbs phase rule: D = C - P + 1</p>
+<p>Where D = degrees of freedom, C = number of components, and P = number of phases.</p>
+
+<div class="edit">
+  <p>Binary Phase Diagram</p>
+  <img src="C:\Users\REDEEMERS\Pictures\Screenshot 2025-05-23 183738.png" alt="" class="img1">
+  <ul style="color: white;">
+    <li>This binary phase diagram is divided into liquid and solid phases.</li>
+    <li>The phase below the temperature line TsMNTl represents the solid phase.</li>
+    <li>The phase above the temperature line TsQTl corresponds to the liquid phase.</li>
+    <li>Between these limits, both liquid and solid phases coexist (L + S).</li>
+    <li>The boundary between the solid phase and the L + S region is called the solidus line.</li>
+    <li>The boundary between the liquid phase and the L + S region is called the liquidus line.</li>
+    <li>The two components are A and B, with their respective weight percentages. A varies from 0 to 100% from left to right; B varies from 100% to 0% from left to right.</li>
+    <li>The tie line, such as line QN at temperature T1, is a horizontal line connecting the compositions of coexisting phases.</li>
+    <li>The intersection of the tie line with the liquidus at point Q indicates the liquid composition (Cₗ), while the intersection with the solidus at point N indicates the solid composition (Cₛ).</li>
+    <li>In single-phase regions, the degrees of freedom are calculated as D = c - p + 1; for example, D = 2 - 1 + 1 = 2.</li>
+    <li>In two-phase regions, D = c - p + 1; for example, D = 2 - 2 + 1 = 1.</li>
+  </ul>
+</div>
+</div>
+</body>
+</html>
